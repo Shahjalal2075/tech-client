@@ -1,10 +1,11 @@
 import Banner from "../Banner/Banner";
+import AllBrand from "./AllBrand";
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h2 className="text-5xl text-center font-bold">Home</h2>
+            <AllBrand></AllBrand>
         </div>
     );
 };
