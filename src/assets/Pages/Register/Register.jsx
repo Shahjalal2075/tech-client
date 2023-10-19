@@ -75,7 +75,10 @@ const Register = () => {
 
                 <h2 className="text-4xl font-bold">Create Account</h2>
                 <p className="text-base font-medium mt-12">Please Enter Your Details</p>
-                <button onClick={handleGoogleSignin} className="border px-6 py-1 rounded-2xl text-xl font-semibold my-6 w-80">Sign Up with Google</button>
+                <button onClick={handleGoogleSignin} className="border px-6 py-1 rounded-2xl text-xl font-semibold my-6 w-80 flex justify-center items-center gap-4">
+                    <img className="w-6" src="https://i.ibb.co/5kpQLKC/google.png" alt="Google" />
+                    Log In with Google
+                </button>
                 <div className="flex gap-4 items-center">
                     <hr className="w-20" />
                     <p>or</p>
