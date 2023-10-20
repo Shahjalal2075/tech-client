@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartCardView from "./CartCardView";
 import { AuthContext } from "../../providers/AuthProvider";
 
@@ -6,11 +6,32 @@ const Cart = () => {
 
     const { user } = useContext(AuthContext);
 
+    const [allProducts, setAllProducts] = useState([]);
     const [products, setProducts] = useState([]);
+
+    const email=user.email;
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/cart`)
+            .then(res => res.json())
+            .then(data => setAllProducts(data));
+    }, [])
+
+    useEffect(() => {
+        const dataList = [];
+
+        for (const data of allProducts) {
+            if(data.email===email)
+            {
+                dataList.push(data);
+            }
+        }
+        setProducts(dataList);
+    }, [allProducts])
 
     return (
         <div className="">
-            <h2 className="text-5xl text-center font-bold my-16">My Cart: {user.email}</h2>
+            <h2 className="text-5xl text-center font-bold my-16">My Cart</h2>
             {
                 (products.length === 0)
                     ?

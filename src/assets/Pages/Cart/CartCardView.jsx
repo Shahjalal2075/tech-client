@@ -1,8 +1,41 @@
 import PropTypes from 'prop-types';
+import Swal from 'sweetalert2';
 
-const CartCardView = ({product}) => {
+const CartCardView = ({ product }) => {
 
-    const { _id, photo, productName, brandName, type, price,rating } = product;
+    const { _id, photo, productName, brandName, type, price, rating } = product;
+
+    const handleDelete = () => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+                fetch(`http://localhost:5000/cart/${_id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => {
+                        res.json()
+                    })
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire(
+                                'Deleted!',
+                                `${productName} has been deleted.`,
+                                'success'
+                            )
+                        }
+                    })
+            }
+        })
+    }
 
     return (
         <div className="card card-side bg-[#A2B7B5] p-6 shadow-xl flex">
@@ -30,7 +63,7 @@ const CartCardView = ({product}) => {
                     }
                 </div>
                 <div className="flex justify-between">
-                    <button className='btn bg-red-600'>Delete</button>
+                    <button onClick={handleDelete} className='py-3 text-xl bg-red-600 text-white font-bold w-1/2 rounded-lg border-red-600'>Delete</button>
                 </div>
             </div>
         </div>
