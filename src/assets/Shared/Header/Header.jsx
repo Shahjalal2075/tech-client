@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../Providers/AuthProvider";
 import './Header.css';
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Header = () => {
 
