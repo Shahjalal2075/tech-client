@@ -1,17 +1,47 @@
+import { useContext } from "react";
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { AuthContext } from "../../providers/AuthProvider";
 
 const ProductDetails = () => {
 
     const product = useLoaderData();
     const navigate = useNavigate();
 
+    const { user } = useContext(AuthContext);
+
     const handleAddCart = () => {
-        toast("Product Added Cart Succsessfull.");
-        setTimeout(() => {
-            navigate(`/${product.brandName}`);
-        }, 1600);
+
+        const email = user.email;
+        const productName = product.productName;
+        const brandName = product.brandName;
+        const type = product.type;
+        const price = product.price;
+        const photo = product.photo;
+        const rating = product.rating;
+
+        const cartProduct = { email,productName, brandName, type, price, photo, rating };
+
+        console.log(cartProduct);
+
+        fetch('http://localhost:5000/cart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(cartProduct)
+        })
+            .then(res => {
+                res.json()
+                toast("Product Added Cart Succsessfull.");
+                setTimeout(() => {
+                    navigate(`/${product.brandName}`);
+                }, 1600);
+            })
+            .then(data => {
+                console.log(data);
+            })
     }
 
     return (
