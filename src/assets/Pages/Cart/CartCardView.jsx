@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 const CartCardView = ({ product }) => {
 
     const { _id, photo, productName, brandName, type, price, rating } = product;
-
+    
     const handleDelete = () => {
         Swal.fire({
             title: 'Are you sure?',
@@ -33,8 +33,12 @@ const CartCardView = ({ product }) => {
                             )
                         }
                     })
+                setTimeout(() => {
+                    window.location.reload();
+                }, 600);
             }
         })
+
     }
 
     return (
