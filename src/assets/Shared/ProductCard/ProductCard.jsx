@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import ProductCardView from "../ProductCardView/ProductCardView";
+import AdsSlider from "../AdsSlider/AdsSlider";
 
 const ProductCard = () => {
     const [products, setProducts] = useState([]);
@@ -23,7 +24,10 @@ const ProductCard = () => {
     console.log(loaderData)
 
     return (
-        <div className="">
+        <div className="my-6">
+
+            <AdsSlider></AdsSlider>
+
             <h2 className="text-5xl text-center font-bold my-16">{brandName}</h2>
             {
                 (products.length === 0)
