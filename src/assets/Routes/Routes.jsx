@@ -40,17 +40,17 @@ const Routes = createBrowserRouter([
             {
                 path: "/:brandName",
                 element: <ProductCard></ProductCard>,
-                loader: ({ params }) => fetch(`https://tech-server-hck6wor8o-mullah-mohammad-shahjalals-projects.vercel.app/products/${params.brandName}`)
+                loader: ({ params }) => fetch(`https://tech-server-7qnmulr4e-mullah-mohammad-shahjalals-projects.vercel.app/products/${params.brandName}`)
             },
             {
                 path: "/:brandName/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://tech-server-hck6wor8o-mullah-mohammad-shahjalals-projects.vercel.app/products/${params.brandName}/${params.id}`)
+                loader: ({ params }) => fetch(`https://tech-server-7qnmulr4e-mullah-mohammad-shahjalals-projects.vercel.app/products/${params.brandName}/${params.id}`)
             },
             {
                 path: "/update/:brandName/:id",
                 element: <PrivateRoute><UpdateProducts></UpdateProducts></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://tech-server-hck6wor8o-mullah-mohammad-shahjalals-projects.vercel.app/products/${params.brandName}/${params.id}`)
+                loader: ({ params }) => fetch(`https://tech-server-7qnmulr4e-mullah-mohammad-shahjalals-projects.vercel.app/products/${params.brandName}/${params.id}`)
             }
         ]
     },
