@@ -50,7 +50,7 @@ const UpdateProducts = () => {
                         </label>
                     </div>
 
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text">Brand Name</span>
                         </label>
@@ -72,7 +72,7 @@ const UpdateProducts = () => {
                         </label>
                     </div>
 
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text">Price</span>
                         </label>
@@ -94,7 +94,7 @@ const UpdateProducts = () => {
                         </label>
                     </div>
 
-                    <div className="form-control md:w-1/2 ml-4">
+                    <div className="form-control md:w-1/2 md:ml-4">
                         <label className="label">
                             <span className="label-text">Rating</span>
                         </label>

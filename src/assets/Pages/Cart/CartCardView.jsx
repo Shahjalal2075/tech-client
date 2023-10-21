@@ -38,9 +38,9 @@ const CartCardView = ({ product }) => {
     }
 
     return (
-        <div className="card card-side bg-[#A2B7B5] p-6 shadow-xl flex">
-            <figure className='w-1/2'><img src={photo} alt="Movie" /></figure>
-            <div className="card-body w-1/2">
+        <div className="card card-side bg-[#A2B7B5] p-6 shadow-xl flex lg:flex-row flex-col">
+            <figure className='lg:w-1/2 w-full'><img src={photo} alt="Movie" /></figure>
+            <div className="card-body lg:w-1/2 w-full">
                 <h2 className="text-2xl font-bold">{productName}</h2>
                 <p className='text-xl font-semibold pt-3'>{brandName}</p>
                 <p className='text-xl font-semibold'>{type} </p>
