@@ -17,7 +17,7 @@ const CartCardView = ({ product }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/cart/${_id}`, {
+                fetch(`https://tech-server-hck6wor8o-mullah-mohammad-shahjalals-projects.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => {

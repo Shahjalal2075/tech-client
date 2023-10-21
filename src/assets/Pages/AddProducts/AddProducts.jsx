@@ -22,7 +22,7 @@ const AddProducts = () => {
 
         console.log(product);
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://tech-server-hck6wor8o-mullah-mohammad-shahjalals-projects.vercel.app/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

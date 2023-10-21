@@ -25,7 +25,7 @@ const ProductDetails = () => {
 
         console.log(cartProduct);
 
-        fetch('http://localhost:5000/cart', {
+        fetch('https://tech-server-hck6wor8o-mullah-mohammad-shahjalals-projects.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
