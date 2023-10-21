@@ -17,9 +17,9 @@ const ClientReview = () => {
                     </div>
                 </div>
                 <div className="card shadow-xl bg-[#A2B7B5] p-6">
-                    <figure><img src="https://i.ibb.co/DMsLmrf/iphn14.png" alt="" /></figure>
+                    <figure><img src="https://i.ibb.co/68SC15x/s23.png" alt="" /></figure>
                     <div className="">
-                        <h2 className="text-2xl text-center font-bold py-2">I Phone 14</h2>
+                        <h2 className="text-2xl text-center font-bold py-2">Galaxy S23 Ultra</h2>
                     </div>
                 </div>
             </div>
