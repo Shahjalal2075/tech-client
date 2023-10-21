@@ -1,10 +1,12 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const UpdateProducts = () => {
 
     const product = useLoaderData();
-
-    const { _id,photo, productName, brandName, type, price, rating } = product;
+    const navigate = useNavigate();
+    const { _id, photo, productName, brandName, type, price, rating } = product;
 
     const handleUpdateProduct = (e) => {
         e.preventDefault();
@@ -27,7 +29,13 @@ const UpdateProducts = () => {
             },
             body: JSON.stringify(product)
         })
-            .then(res => res.json())
+            .then(res => {
+                res.json()
+                toast("Product Update Succsessfull.");
+                setTimeout(() => {
+                    navigate(`/${brandName}`);
+                }, 1600);
+            })
             .then(data => {
                 console.log(data);
             })
@@ -108,6 +116,7 @@ const UpdateProducts = () => {
                 <input type="submit" value="Update Product" className="btn btn-block bg-white mt-6" />
 
             </form>
+            <ToastContainer />
         </div>
     );
 };
