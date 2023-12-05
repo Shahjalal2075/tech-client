@@ -1,4 +1,8 @@
-## Website Features:
+# Live Link:
+
+link: https://technology-and-electroni-53df3.web.app/
+
+# Website Features:
 
 - User Registration and Authentication
 
@@ -18,6 +22,3 @@
 
 - Discover section
 
-## Live Link:
-
-link: https://technology-and-electroni-53df3.web.app/
