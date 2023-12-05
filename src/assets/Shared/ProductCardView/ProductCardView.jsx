@@ -5,7 +5,7 @@ const ProductCardView = ({ product }) => {
     const { _id, photo, productName, brandName, type, price, rating } = product;
 
     return (
-        <div className="card h-96 card-side bg-[#A2B7B5] p-6 shadow-xl flex lg:flex-row flex-col">
+        <div className="card lg:h-96 card-side bg-[#A2B7B5] p-6 shadow-xl flex lg:flex-row flex-col">
             <figure className='lg:w-1/2 w-full'><img src={photo} alt="Movie" /></figure>
             <div className="card-body lg:w-1/2 w-full">
                 <h2 className="text-2xl font-bold">{productName}</h2>

@@ -17,7 +17,7 @@ const CartCardView = ({ product }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://tech-server-7qnmulr4e-mullah-mohammad-shahjalals-projects.vercel.app/cart/${_id}`, {
+                fetch(`https://tech-server-seven.vercel.app/cart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => {
@@ -42,7 +42,7 @@ const CartCardView = ({ product }) => {
     }
 
     return (
-        <div className="h-96 card card-side bg-[#A2B7B5] p-6 shadow-xl flex lg:flex-row flex-col">
+        <div className="lg:h-96 card card-side bg-[#A2B7B5] p-6 shadow-xl flex lg:flex-row flex-col">
             <figure className='lg:w-1/2 w-full'><img src={photo} alt="Movie" /></figure>
             <div className="card-body lg:w-1/2 w-full">
                 <h2 className="text-2xl font-bold">{productName}</h2>

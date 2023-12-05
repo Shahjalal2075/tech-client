@@ -12,7 +12,7 @@ const Cart = () => {
     const email=user.email;
 
     useEffect(() => {
-        fetch(`https://tech-server-7qnmulr4e-mullah-mohammad-shahjalals-projects.vercel.app/cart`)
+        fetch(`https://tech-server-seven.vercel.app/cart`)
             .then(res => res.json())
             .then(data => setAllProducts(data));
     }, [])
@@ -27,7 +27,7 @@ const Cart = () => {
             }
         }
         setProducts(dataList);
-    }, [allProducts])
+    }, [allProducts, email])
 
     return (
         <div className="">

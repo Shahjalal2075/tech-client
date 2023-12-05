@@ -7,7 +7,7 @@ const AllBrand = () => {
     const [brands, setBrands] = useState([]);
 
     useEffect(() => {
-        fetch('https://tech-server-7qnmulr4e-mullah-mohammad-shahjalals-projects.vercel.app/brands')
+        fetch('https://tech-server-seven.vercel.app/brands')
             .then(res => res.json())
             .then(data => setBrands(data))
     }, []);
