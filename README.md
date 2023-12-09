@@ -1,8 +1,10 @@
-# Live Link:
+# Technology and Electronics
+
+## Live Link:
 
 link: https://technology-and-electroni-53df3.web.app/
 
-# Website Features:
+## Website Features:
 
 - User Registration and Authentication
 
@@ -21,4 +23,18 @@ link: https://technology-and-electroni-53df3.web.app/
 - Google Signin method
 
 - Discover section
+
+## :computer: Uses Languages and Tools
+
+<br>
+<p align="center">
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/react.png"/>
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/node.png"/>
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/express.png"/>
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/mongo.png"/>
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/tailwind.png"/>
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/firebase.png"/>
+<img src="https://raw.githubusercontent.com/Shahjalal2075/Shahjalal2075/main/assets/icons/JavaScript.png"/>
+</p><br/>
+
 
