@@ -9,7 +9,7 @@ const Cart = () => {
     const [allProducts, setAllProducts] = useState([]);
     const [products, setProducts] = useState([]);
 
-    const email=user.email;
+    const email = user.email;
 
     useEffect(() => {
         fetch(`https://tech-server-seven.vercel.app/cart`)
@@ -21,8 +21,7 @@ const Cart = () => {
         const dataList = [];
 
         for (const data of allProducts) {
-            if(data.email===email)
-            {
+            if (data.email === email) {
                 dataList.push(data);
             }
         }
