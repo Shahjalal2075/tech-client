@@ -9,7 +9,7 @@ const Root = () => {
     const { isChecked } = useContext(AuthContext);
 
     return (
-        <div className={isChecked?'bg-[#1D232A] text-[#fff]':'bg-[#fff] text-[#181818]'}>
+        <div className={isChecked?'bg-[#0A101E] text-[#fff]':'bg-[#fff] text-[#181818]'}>
             <div className="container mx-auto">
                 <Header></Header>
                 <Outlet></Outlet>

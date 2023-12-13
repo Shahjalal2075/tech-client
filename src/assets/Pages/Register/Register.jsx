@@ -2,9 +2,9 @@
 import { useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { AuthContext } from '../../Providers/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
 import { updateProfile } from 'firebase/auth';
+import { AuthContext } from '../../providers/AuthProvider';
 
 const Register = () => {
 

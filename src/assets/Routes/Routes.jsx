@@ -10,6 +10,8 @@ import ProductCard from "../Shared/ProductCard/ProductCard";
 import ProductDetails from "../Shared/ProductDetails/ProductDetails";
 import UpdateProducts from "../Pages/UpdateProducts/UpdateProducts";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../Pages/Profile/Profile";
+import EditProfile from "../Pages/Profile/EditProfile";
 
 const Routes = createBrowserRouter([
     {
@@ -28,6 +30,14 @@ const Routes = createBrowserRouter([
             {
                 path: "/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/profile",
+                element: <PrivateRoute><Profile></Profile></PrivateRoute>
+            },
+            {
+                path: "/edit",
+                element: <PrivateRoute><EditProfile></EditProfile></PrivateRoute>
             },
             {
                 path: "/add",
